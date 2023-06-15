@@ -1,0 +1,33 @@
+
+<div class="container">
+  <h2>Artisti</h2>
+  <button mat-raised-button color="primary" (click)="addArtista()">Aggiungi</button>
+  <table class="table table-striped" style="margin-top: 10px;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Data Nascita</th>
+        <th>Data Morte</th>
+        <th>Elimina</th>
+        <th>Modifica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let artista of artisti">
+        <td>{{ artista.id }}</td>
+        <td>{{ artista.nome }}</td>
+        <td>{{ artista.dataN }}</td>
+        <td>{{ artista.dataM }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteArtista(artista.id)">Elimina</button>
+        </td>
+        <td>
+          <button mat-raised-button color="primary" (click)="updateArtista(artista.id, artista)">Modifica</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

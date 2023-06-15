@@ -1,0 +1,21 @@
+<div class="container">
+  <section>
+    <div>
+      <h1  class="text-white text-center" style="background-color: #11111f;">Opere</h1>
+    </div>
+    <!-- Elenco di tutti Opere -->
+    <div class="d-flex flex-wrap justify-content-between">
+      <div class="card col-4 " *ngFor="let opera of opere">
+        <img src="{{opera.img}}" style="border-radius: 10px 10px 0px 0px; max-height: 200px;">
+        <div class="card-body text-white">
+          <h4 class="card-title">{{opera.titolo}}</h4>
+          <h5 class="card-title">{{opera.valore}}$</h5>
+          <p class="card-text">Museo: {{opera.idMuseo.nome}}</p>
+          <p class="card-text">Artista: {{opera.idArtista.nome}}</p>
+          <p class="card-text">Uscita: {{opera.anno}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+

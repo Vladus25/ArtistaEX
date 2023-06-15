@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>Aggiungi artista</h2>
+<form (ngSubmit)="submitForm()" #artistaForm="ngForm">
+  <div style="display: flex;">
+
+    <div class="form-grid">
+      <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="artista.nome" name="nome" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Id Citta</mat-label>
+        <input matInput [(ngModel)]="artista.idCitta.id" name="idCitta" required>
+      </mat-form-field>
+    </div>
+
+    <div class="form-grid">
+      <mat-form-field>
+        <mat-label>Data Nascita</mat-label>
+        <input matInput type="date" [(ngModel)]="artista.dataN" name="dataN" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Data Morte</mat-label>
+        <input matInput type="date" [(ngModel)]="artista.dataM" name="dataM" required>
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="cancel()">Annulla</button>
+    <button mat-button type="submit" [disabled]="!artistaForm.valid">Aggiungi</button>
+  </div>
+
+</form>

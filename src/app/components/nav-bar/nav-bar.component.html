@@ -1,0 +1,24 @@
+<video id="videoBG" autoplay muted loop>
+  <source src="/assets/Chill-Beach-4K.mp4" type="video/mp4">
+</video>
+<nav class="navbar navbar-dark bg-dark navbar-expand-md">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="selectedNavItem === 'Home'" (click)="selectNavItem('Home')" routerLink="/Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="selectedNavItem === 'Artista'" (click)="selectNavItem('Artista')" routerLink="/Artista">Artisti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [class.active]="selectedNavItem === 'Opere'" (click)="selectNavItem('Opere')" routerLink="/Opere">Opere</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
